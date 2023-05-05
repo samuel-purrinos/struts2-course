@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><s:text name="form.titulo"/></title>
+        <title><s:text name="formTitulo" /></title>
     </head>
     <body>
         <h1><s:text name="form.titulo"/></h1>
