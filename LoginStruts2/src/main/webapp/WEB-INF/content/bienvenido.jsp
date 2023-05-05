@@ -4,9 +4,12 @@
 <html>
     <head>
         <title><s:text name="bienvenido.titulo" /></title>
+        <s:head/>
     </head>
     <body>
         <h1><s:text name="bienvenido.titulo" /></h1>
+        <s:actionmessage/>
+        <s:actionerror/>
         <h2><s:text name="bienvenido.mensaje" /></h2>
         <br/>
         <s:text name="form.usuario" /> : <s:property value="usuario"/>

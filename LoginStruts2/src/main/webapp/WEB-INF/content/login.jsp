@@ -4,9 +4,11 @@
 <html>
     <head>
         <title><s:text name="formTitulo" /></title>
+        <s:head/>
     </head>
     <body>
         <h1><s:text name="form.titulo"/></h1>
+        <s:actionerror/>
         <s:form action="validarUsuario">
             <s:textfield key="form.usuario" name="usuario" />
             <s:password key="form.password" name="password"/>

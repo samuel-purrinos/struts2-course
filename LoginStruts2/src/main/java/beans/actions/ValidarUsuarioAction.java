@@ -11,7 +11,7 @@ import org.apache.struts2.convention.annotation.Results;
 
 @Results({
   @Result(name="success" ,location="/WEB-INF/content/bienvenido.jsp"),
-  @Result(name="input" ,location="login",type="redirectAction")
+  @Result(name="input" ,location="/WEB-INF/content/login.jsp")
 })
 public class ValidarUsuarioAction extends ActionSupport{
     
@@ -25,11 +25,33 @@ public class ValidarUsuarioAction extends ActionSupport{
     @Override
     public String execute(){
         if("admin".equals(this.usuario)){
+            addActionMessage(getText("usuario.valido"));
         return SUCCESS;
         }else {
             return INPUT;
         }
     }
+
+    @Override
+    public void validate() {
+        if(this.usuario==null || this.usuario.trim().equals("")){
+            addFieldError("usuario",getText("val.usuario"));
+        }else if(!usuarioValido()){
+            addActionError(getText("usuario.invalido"));
+        }
+        
+        if(this.password==null || this.password.trim().equals("")){
+            addFieldError("password",getText("val.password"));
+        }else if(this.password.length()<3){
+            addFieldError("password",getText("val.pass.minlength"));
+        }
+    }
+    
+    public boolean usuarioValido(){
+        return "admin".equals(this.usuario);
+    }
+    
+    
 
     public String getUsuario() {
         return usuario;
