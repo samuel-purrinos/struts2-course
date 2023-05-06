@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Personas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Body</title>
     </head>
     <body>
-        <h1>Personas</h1>
+        <h1>Body</h1>
     </body>
 </html>
