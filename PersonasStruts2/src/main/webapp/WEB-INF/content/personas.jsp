@@ -23,5 +23,10 @@
         Calle : <s:property value="persona.domicilio.calle" /> <br/>
         No. Calle : <s:property value="persona.domicilio.numeroCalle" /> <br/>
         País : <s:property value="persona.domicilio.pais" /> <br/>
+        
+        <s:if test="persona.nombre != null">
+            <s:if test="persona.nombre == 'admin'">Es un usuario administrador</s:if>
+            <s:else>El usuario NO es administrador</s:else>
+        </s:if>
     </body>
 </html>
